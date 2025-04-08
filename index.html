@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Fitting Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+    
+    <div class="game-container">
+        <div id="gameStats" class="game-stats">
+            <div>Lives: <span id="lifeCount" class="life-count">20</span></div>
+            <div>Score: <span id="scoreCount" class="score-count">0</span></div>
+        </div>
+        
+        <div id="successMessage" class="success-message hidden">
+            <div class="success-content">
+                <h2>Congratulations!</h2>
+                <p>You filled the entire grid!</p>
+                <button id="playAgainBtn" class="play-again-btn">Play Again</button>
+            </div>
+        </div>
+        
+        <div id="gameOverMessage" class="success-message hidden">
+            <div class="success-content">
+                <h2 style="color: #ff6b6b;">Game Over!</h2>
+                <p>Your final score: <span id="finalScore">0</span></p>
+                <button id="restartBtn" class="play-again-btn">Play Again</button>
+            </div>
+        </div>
+        
+        <div class="game-layout">
+            <div class="gameplay-area">
+                <div id="enemyContainer" class="enemy-container"></div>
+                <div id="homeBase" class="home-base">
+                    <img src="res/homebase.png" alt="Home Base">
+                </div>
+                <div id="gridsContainer" class="grids-container">
+                    <!-- Grids will be generated here -->
+                </div>
+                
+                <div id="activeGridContainer" class="active-grid-container hidden">
+                    <div id="activeGrid" class="grid-container"></div>
+                </div>
+                
+                <div id="trashArea" class="trash-container">
+                    <img src="res/trash.png" alt="Trash" class="trash-icon">
+                    <p>Drag here to discard</p>
+                </div>
+            </div>
+            
+            <div class="pieces-section">
+                <div class="pieces-container">
+                    <h3>Available Pieces</h3>
+                    <div id="piecesArea" class="pieces-area"></div>
+                </div>
+                
+                <div class="next-piece-container">
+                    <h3>Next Piece</h3>
+                    <div id="nextPieceArea" class="next-piece-area"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html> 
